@@ -1,19 +1,17 @@
 //1.)Do the below programs in anonymous function & IIFE
-//All prime number in an array
+//Return all Plandrome in an array
+
+let arr=["Mom","vijay","LOl","IMI"];
 
 (function(){
-    let arr=[3,4,5,10,45];
-    let primeNum=arr.map((val,ind,ar)=>{
-        for(i=2;i<val;i++){
-            if(val%i==0){
-                break;
-            }
-            else{
-                return val;
-            }
-        }
-    })
-    console.log(primeNum);
+let pal=arr.filter((val,ind,ar)=>{
+    var a="";
+    for(i=val.length-1;i>=0;i--){
+        a=a+val.charAt(i);
+    }
+    if(val.toUpperCase()===a.toUpperCase()){
+        return val;
+    }
+})
+console.log(pal);
 })();
-
-
